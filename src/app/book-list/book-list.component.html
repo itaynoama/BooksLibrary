@@ -1,0 +1,48 @@
+<div class="card">
+    <button class="close" (click)="deleteBook(index)">&times;</button>
+    <div class="card-body">
+        <h2 class="card-title">{{book.title | titleCase}}</h2>
+        <p class="card-text">{{book.author}}</p>
+        <p class="card-text">{{book.date | date:'dd-MM-yyyy'}}</p>
+        <button (click)="showDialog = !showDialog;">Edit</button>
+    </div>
+</div>
+<app-modal [(visible)]="showDialog">
+    <form #bookForm="ngForm">
+        <div class="form-group">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <label for="title">Title</label>
+                    <input type="text" required class="form-control" [ngModel]="book.title" name="title" #title="ngModel">
+                    <div *ngIf="title.value == 0 && (title.dirty || title.touched)" class="alert alert-danger">
+                        <div [hidden]="title.value != 0">
+                            The title of the book can't be empty!
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="details">
+                        <label for="author">Author</label>
+                        <input type="text" required class="form-control" [ngModel]="book.author" name="author" #author="ngModel">
+                        <div *ngIf="author.value == 0 && (author.dirty || author.touched)" class="alert alert-danger">
+                            <div [hidden]="author.value != 0">
+                                The author of the book can't be empty!
+                            </div>
+                        </div>
+                        <label for="date">Date</label>
+                        <input type="date" required class="form-control" [ngModel]="book.date | date:'yyyy-MM-dd'" name="date" #date="ngModel">       
+                        <div *ngIf="date.value == 0 && (date.dirty || date.touched)" class="alert alert-danger">
+                            <div [hidden]="date.value != 0">
+                                The date of the book is not valid!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="closeBtn btn-danger" (click)="showDialog = !showDialog">Cancel</button>
+                    <button class="closeBtn btn-success" (click)="editBook(title.value,author.value,date.value); showDialog = !showDialog" [disabled]="bookForm.invalid">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</app-modal>

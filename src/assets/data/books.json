@@ -1,0 +1,34 @@
+{
+  "books": [
+    {
+      "author": "Samuel R. Delany",
+      "title": "Empire star",
+      "date": "1979-07-04"
+    },
+    {
+      "author": "J.K Rowling",
+      "title": "Harry Potter and the philosoper s stone",
+      "date": "1981-11-22"
+    },
+    {
+      "author": "J.G. Ballard",
+      "title": "Stars in my pockets like grains of sand",
+      "date": "1983-03-19"
+    },
+    {
+      "author": "Samuel R. Delany",
+      "title": "Dhalgren",
+      "date": "1992-06-01"
+    },
+    {
+      "author": "Philip K. Dick",
+      "title": "Do androids dream of Electric Sheep",
+      "date": "1953-04-28"
+    },
+    {
+      "author": "Margaret Atwood",
+      "title": "The handmaiden s tale",
+      "date": "1953-07-05"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html,body,.wrapper{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+.form-control {
+    width: 275px;
+}
+label {
+    margin-top: 10px;
+}
+.modal-header {
+    padding: 1.5em !important;
+}

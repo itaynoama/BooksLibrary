@@ -1,0 +1,28 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+.modalSection {
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 325px;
+    z-index: 999999;
+}
+.modal-content {
+    position: relative;
+    outline: none;
+}
+@media (max-width: 320px) {
+    .modalSection {
+        width: 300px;
+    }     
+}
