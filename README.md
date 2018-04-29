@@ -19,3 +19,5 @@ For a dev server. Navigate to `http://localhost:4200/`. The app will automatical
 ### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+#### Demo - https://itaynoama.github.io/BooksLibrary/
