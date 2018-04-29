@@ -7,7 +7,8 @@ import { Book } from "../model/book";
 @Injectable()
 export class BooksService {
  
-    private _booksJSON = "../assets/data/books.json";
+//    private _booksJSON = "../assets/data/books.json";
+    private _booksJSON = "https://itaynoama.github.io/BooksLibrary/assets/data/books.json";
 
     constructor(private http: Http) {}
 
